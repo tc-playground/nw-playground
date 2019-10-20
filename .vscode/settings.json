@@ -1,12 +1,20 @@
 {
     "cSpell.words": [
+        "Acunetix",
+        "Diffie",
         "FQDN",
         "MTLS",
+        "SMTPS",
+        "VCNs",
+        "VLANs",
+        "XMPP",
         "keyout",
         "nameservers",
         "newkey",
         "nsswitch",
         "openssl",
-        "resolv"
+        "resolv",
+        "tuntap",
+        "vtun"
     ]
 }

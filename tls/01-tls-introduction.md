@@ -52,5 +52,4 @@
 
 ## References
 
-* [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) - Wikipedia.
-
+* [TLS Introduction](https://www.acunetix.com/blog/articles/tls-security-what-is-tls-ssl-part-1)

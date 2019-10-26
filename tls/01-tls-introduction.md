@@ -1,4 +1,4 @@
-# TLS Introduction
+# SSL/TLS Introduction
 
 ## Introduction
 
@@ -8,11 +8,11 @@
 
 2. The purpose of TLS is to provide:
 
-    1. `Privacy and Integrity`
+    1. `Privacy and Integrity` - Secure communication channel.
     
-    2. `Identification`
+    2. `Identification` - Know who you are communicating with. Authenticity.
 
-    3. `Perfect Forward Secrecy`
+    3. `Perfect Forward Secrecy` - Old communications remain secret.
 
 4. `TLS` is used to protect `TCP` based protocols: `SMTP`/`POP3` (e-mail), `XMPP` (instant messaging), `FTP`, `VoIP`, `VPN`, etc.
 

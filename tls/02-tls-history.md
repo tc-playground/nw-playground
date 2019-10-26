@@ -1,4 +1,4 @@
-# SSL and TLS History
+# SSL/TLS History
 
 1. 1994 - The `Secure Sockets Layer` (`SSL`) protocol was introduced by Netscape.
 

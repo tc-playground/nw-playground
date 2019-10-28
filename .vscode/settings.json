@@ -7,6 +7,7 @@
         "ECDSA",
         "FQDN",
         "HMAC",
+        "Iden",
         "MITHM",
         "MITM",
         "MTLS",

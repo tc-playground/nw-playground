@@ -10,7 +10,6 @@
 
 ## Docker Networking Drivers
 
-
 1. `Bridge network`
 
     1. The default network type created when docker is started.
@@ -27,7 +26,6 @@
     
     3. A container which binds to port XXX is available on port XXX on the host’s IP address.
     
-
 3. `None network`
 
     1. Containers are not attached to any network and do not have any access to the external network or other containers. 
@@ -38,9 +36,9 @@
 
     1. Creates an internal private network that spans across all the nodes participating in the (swarm) cluster. 
     
-    2. An overlay network can facilitate communication between a `docker swarm service` and a standalone container.
+    2. An `overlay network` can facilitate communication between a `docker swarm service` and a standalone container.
     
-    3. An overlay network can facilitate communication between between two standalone containers on different Docker Daemons.
+    3. An `overlay network` can facilitate communication between between two standalone containers on different Docker Daemons.
 
 5. `Macvlan network`
 

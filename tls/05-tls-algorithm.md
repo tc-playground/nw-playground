@@ -14,8 +14,21 @@
 
 1. __Step 1 Client Hello__ (Client → Server) 
 
-    * The client sends a `Client Hello` to the server. 
+    * The client sends a `Client Hello` to the server. It includes the following:
 
+    1. `Client Version` - An ordered list of all the TLS/SSL protocol versions that it supports.
+
+    2. `Client Random` - A 32-byte random number. The client random and the server random are later used to generate the key for encryption.
+
+    3. `Session ID` - This is the session id to be used for the connection. If the session_id is not empty, the server searches for previously cached sessions and resumes that session if a match is found.
+
+    4. `Compression Methods` - A list of methods for compressing the SSL packets. This can reduce security.
+
+    5. `Cipher Suites` - A list of supported options. Each cipher suite contains one cryptographic algorithm for each of the following tasks: `key exchange`, `authentication`, `bulk (data) encryption`, and `message authentication`.
+
+    6. `Extensions` - Additional configuraion, `elliptic curve cryptography` parameters, etc.
+
+    > Capture and example with `tcdump`.
 
 2. __Step 2 Server Hello__ (Server → Client)
 

@@ -6,13 +6,13 @@
 
 2. The `SSL`/`TLS` security protocols use a combination of `asymmetric` and `symmetric` encryption. 
 
-3. In `SSL`/`TLS` __handhsake__ the `client` and the `server` must `negotiate the algorithms used` and `exchange key information`.
+3. In `SSL`/`TLS` __handshake__ the `client` and the `server` must `negotiate the algorithms used` and `exchange key information`.
 
 ---
 
 ## Browser TLS 1.2 - Algorithmic Steps
 
-1. __Step 1 Client Hello__ (Client → Server) 
+1. __Step 1: Client Hello__ (Client → Server) 
 
     * The client sends a `Client Hello` to the server. It includes the following:
 
@@ -30,9 +30,21 @@
 
     > Capture and example with `tcdump`.
 
-2. __Step 2 Server Hello__ (Server → Client)
+2. __Step 2: Server Hello__ (Server → Client)
 
     * The server sends a `Server Hello` to the client. 
+
+    * A `Server Hello` may either contain selected options from among those proposed during `Client Hello`, or, may be a `handshake failure message`.
+
+    1. `Server Version` - The server selects the preferred version of the SSL/TLS protocol from among those presented by the client.
+
+    2. `Client Random` - A 32-byte random number. The server random and the client random are later used to generate the key for encryption.
+
+    3. `Session ID` - If the client Session ID was not empty, the server searches for previously cached sessions and if a match is found, that session ID is used to resume the session. If the client Session ID was empty, a new session may be created by the server and sent in the server Session ID.
+
+    4. `Cipher Suites` - The server selects the cipher suite from among Cipher Suites sent in the `Client Hello`.
+
+    5. `Compression Methods` - The server selects the compression method from among Compression Methods sent in the `Client Hello`.
 
 
 3. __Step 3: Server Certificate__ (Server → Client)
@@ -44,9 +56,7 @@
 
 4. __Optional Step 4: Client Certificate__ (Client → Server)
 
-    * In some cases, the server may require the client to be authenticated with a client certificate. `Mutual TLS (mTLS)`.
-    
-    * If so, the client provides its signed certificate to the server.
+    * In some cases, the server may require the client to be authenticated with a client certificate. `Mutual TLS (mTLS)`. If so, the client provides its signed certificate to the server.
 
 
 5. __Step 5: Server Key Exchange__ (Server → Client)
@@ -54,12 +64,12 @@
     * The server key exchange message is sent only if the certificate provided by the server is not sufficient for the client to exchange a pre-master secret. (This is true for `DHE_DSS`, `DHE_RSA`, and `DH_anon`).
 
 
-6. __Step 6 Server Hello Done__ (Server → Client)
+6. __Step 6: Server Hello Done__ (Server → Client)
 
     * The server sends this to the client to confirm that the `Server Hello` message is finished.
 
 
-7. __Step 7 Client Key Exchange__ (Server → Client)
+7. __Step 7: Client Key Exchange__ (Server → Client)
 
     * The Client Key Exchange message is sent right after the Server `Hello Done` is received from the server. 
     
@@ -68,7 +78,7 @@
     * During this stage, the client creates a `pre-master key`.
 
 
-8. __Step 8 Client Change Cipher Spec__ (Client → Server)
+8. __Step 8: Client Change Cipher Spec__ (Client → Server)
 
     * At this point, the client is ready to switch to a secure, encrypted environment. 
     
@@ -77,21 +87,21 @@
     * Any data sent by the client from now on will be encrypted using the `symmetric shared key`.
 
 
-9. __Step 9 Client Handshake Finished__ (Client → Server)
+9. __Step 9: Client Handshake Finished__ (Client → Server)
 
     * The last message of the handshake process from the client signifies that the handshake is finished. 
     
     * This is also the first encrypted message of the secure connection.
 
 
-10. __Step 10 Server Change Cipher Spec__ (Server → Client)
+10. __Step 10: Server Change Cipher Spec__ (Server → Client)
 
     * The server is also ready to switch to an encrypted environment.
     
     * Any data sent by the server from now on will be encrypted using the symmetric shared key.
 
 
-11. __Step 11 Server Handshake Finished__ (Server → Client)
+11. __Step 11: Server Handshake Finished__ (Server → Client)
 
     * The last message of the handshake process from the server (sent encrypted) signifies that the handshake is finished.
 

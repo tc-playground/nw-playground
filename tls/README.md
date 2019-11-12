@@ -33,7 +33,7 @@
 
 2. __Step 2: Server Hello__ (Server → Client)
 
-    * The server sends a `Server Hello` to the client to select suported options and provide a server random secret.
+    * The server sends a `Server Hello` to the client to select supported options and provide a server random secret.
 
 3. __Step 3: Server Certificate__ (Server → Client)
 

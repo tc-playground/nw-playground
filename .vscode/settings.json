@@ -26,6 +26,7 @@
         "newkey",
         "nsswitch",
         "openssl",
+        "proxied",
         "resolv",
         "tcpdump",
         "tuntap",

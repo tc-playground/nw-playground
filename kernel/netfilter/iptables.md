@@ -18,7 +18,7 @@
 
 * All data is sent in the form packets over the internet. 
 
-* `iptables` is just a command-line interface to the packet filtering functionality in netfilter.
+* `iptables` is just a command-line interface to the packet filtering functionality in `netfilter`.
 
 * `iptables` is a stateful `firewall`.
 
@@ -38,7 +38,7 @@
 
         * `rules` - Are defined with respect to packet criteria, and, have a `target` (action):
         
-            * `criteria` - Includes: source/destination ip, source dstination port, protocol, input/ouput interfaces, etc.
+            * `criteria` - Includes: source/destination ip, source destination port, protocol, input/output interfaces, etc.
 
             * `connection state` - The history of the connection and who initiated it. 
 
@@ -114,7 +114,7 @@ Some targets are `non-terminating`, which means that they keep matching other ru
     * `chains` are queried as follows:
         * `t` - Target chain on table. The default is the `filter` table.
         * `L` - List all chains.
-        * `-v` - Verbose ouput.
+        * `-v` - Verbose output.
         * `--line-numbers` - Used to include the rules index - this is used for operation on a specific rule.
         * `-N` - CCreate a new `custom chain`.
         * `-P` - Change the `default policy` (target) for a chain.
@@ -198,18 +198,24 @@ Some targets are `non-terminating`, which means that they keep matching other ru
 
 ---
 
-## Tutorials - Simple
+## Tutorials
 
 ### Quick
+
 * [Simple `iptables` Tutorial 1](https://www.hostinger.co.uk/tutorials/iptables-tutorial)
+
 * [Simple `iptables` Tutorial 2](https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall)
 
 ### Practical
+
 * [`iptables` Overview](https://www.booleanworld.com/depth-guide-iptables-linux-firewall/)
+
 * [`iptables` Common Commands](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands)
 
 ### In Depth
+
 * [`iptables` Tutorial](https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html)
+
 * [`iptables` NAT Tutorial](https://www.karlrupp.net/en/computer/nat_tutorial)
 
 

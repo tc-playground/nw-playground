@@ -15,6 +15,7 @@
         "Iface",
         "MITHM",
         "MITM",
+        "MPLS",
         "MTLS",
         "Macvlan",
         "NATs",

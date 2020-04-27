@@ -27,6 +27,7 @@
         "NOTRACK",
         "PLEN",
         "POSTROUTING",
+        "PPTP",
         "PTYPE",
         "SMTPS",
         "SNAT",

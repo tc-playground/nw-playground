@@ -16,7 +16,11 @@
 
 1. The `OSI Model` has __7 layers__.
 
-> `All People Sleeping Through Networking Don't Pass`
+    * Layers 1-4 - Network Engineer
+
+    * Layers 5-7 - Developer
+
+    > `All People Sleeping Through Networking Don't Pass`
 
 ```
 +--------------+

@@ -10,7 +10,7 @@
 +-----------------+------+------------------+
 ```
 
-* The ethernet standard means there is no need to translate packets going over links of differnet speeds.
+* The ethernet standard means there is no need to translate packets going over links of different speeds.
 
     * All packets have the same frame format.
 

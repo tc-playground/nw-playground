@@ -2,9 +2,9 @@
 
 ## Introduction
 
-* `Docker networking` is used to establish communication between the docker containers and the outside world  via the host machine 
+* `Docker networking` is used to establish communication between the docker containers and the outside world via the host machine. 
 
-* `Docker networking` is the communication passage through which all the isolated containers communicate with each other,
+* `Docker networking` is the communication passage through which all the isolated containers communicate with each other.
 
 ---
 
@@ -14,7 +14,7 @@
 
     1. The default network type created when docker is started.
 
-    2. Containers be default are place on this network.
+    2. Containers by default are placed on this network.
 
     3. The network is `bridged` to the host.
 
@@ -52,7 +52,7 @@
 
 ## References
 
-* [Docker NEtworking Docs](https://docs.docker.com/v17.09/engine/userguide/networking)
+* [Docker Networking Docs](https://docs.docker.com/v17.09/engine/userguide/networking)
 
 * [Docker Networking Concepts](https://www.ostechnix.com/explaining-docker-networking-concepts0)
 

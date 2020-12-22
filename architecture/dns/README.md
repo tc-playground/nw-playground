@@ -28,6 +28,4 @@
 
 * [/etc/resolv.conf - Wikipedia](https://en.wikipedia.org/wiki/Resolv.conf)
 
-* []()
-
 * [FQDN - Wikipedia](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)
